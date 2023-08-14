@@ -8,10 +8,4 @@ ln -s plugins-custom plugins
 
 clevercloud/pre_run.sh
 
-cd ${APP_HOME}
-
-cp config/config.ini.php config/config.ini.php.tmp
-
-sed '/\[General\]/a enable_plugin_upload=1' config/config.ini.php.tmp > config/config.ini.php
-
-rm config/config.ini.php.tmp
+sed -i '/\[General\]/a enable_plugin_upload=1' config/config.ini.php
