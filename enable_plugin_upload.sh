@@ -3,7 +3,7 @@
 rm -rf plugins
 ln -s plugins-custom plugins
 
-clevercloud/pre_run.sh;
+clevercloud/pre_run.sh
 
 cp config/config.ini.php config/config.ini.php.back
 
