@@ -1,5 +1,10 @@
 #!/bin/sh
 
+rm -rf plugins
+ln -s plugins-custom plugins
+
+clevercloud/pre_run.sh;
+
 cp config/config.ini.php config/config.ini.php.back
 
 cat <<EOF | php > config/config.ini.php
@@ -7,6 +12,3 @@ cat <<EOF | php > config/config.ini.php
 EOF
 
 rm config/config.ini.php.back
-
-rm -rf plugins
-ln -s plugins-custom plugins
