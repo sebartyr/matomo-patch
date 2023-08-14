@@ -10,8 +10,6 @@ clevercloud/pre_run.sh
 
 cp config/config.ini.php config/config.ini.php.back
 
-cat <<EOF | php > config/config.ini.php
-<?php echo str_replace("[General]", "[General]\nenable_plugin_upload=1", file_get_contents('config/config.ini.php.back'));
-EOF
+sed -i 's/[General]/[General]\nenable_plugin_upload=1/g' config/config.ini.php
 
 rm config/config.ini.php.back
