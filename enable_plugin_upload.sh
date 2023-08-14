@@ -1,6 +1,8 @@
 #!/bin/sh
 set -x 
 
+which php
+
 rm -rf plugins
 ln -s plugins-custom plugins
 
