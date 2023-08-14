@@ -1,4 +1,5 @@
 #!/bin/sh
+set -x 
 
 rm -rf plugins
 ln -s plugins-custom plugins
